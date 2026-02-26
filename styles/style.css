@@ -2,4 +2,245 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  margin: 0 auto;
+  background-image: var(--backgroung-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: var(--font, monospace);
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 23.4px;
+}
+
+/* Шапка сайта */
+
+.header {
+  block-size: 100vh;
+  min-block-size: 668px;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 40px;
+}
+
+/* Общие стили для кнопок навигации */
+
+.header__theme-menu-list {
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  margin-block-start: 19%;
+  gap: 15px;
+  line-height: 18px;  
+  font-size: 19px;
+  font-family: var(--font);
+}
+
+.header__theme-menu-button {
+  padding: 1.8px 13px;
+  color: var(--button-color);
+  background-color: transparent;
+  border: none;
+  text-align: center;
+}
+
+/* Стили для реакции кнопки на действия с ней */
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-color);
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 0.40);
+}
+
+.header__theme-menu-button:focus {
+  border-bottom: 1px solid rgba(255, 0, 112);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+}
+
+/* Декоротивный элемент REC */
+
+.decorative__element {
+  font-family: "IBM Plex Mono", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  color: #FF0070;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-transform: uppercase;
+  margin-right: 4px;
+}
+
+.decorative__element::after {
+  content: " ";
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  background-color: var(--accent-color);
+  filter: drop-shadow(0px 0px 4px var(--accent-color));
+}
+
+/* Силизация уголков */
+
+.frame::before, .frame::after {
+  content: "";
+  position: absolute;
+  inline-size: 25px;
+  block-size: 25px;
+  
+}
+
+.frame::before {
+  top: 0px;
+  right: 0px;
+  border-top: 1px solid var(--accent-color);
+  border-right: 1px solid var(--accent-color);
+  margin: 10px 10px 0 0;
+}
+
+.frame::after {
+  bottom: 0px;
+  left: 0px;
+  border-bottom: 1px solid var(--accent-color);
+  border-left: 1px solid var(--accent-color);
+  margin: 0 0 10px 10px;
+}
+
+/* Стилизация заголовка шапки */
+
+.header__title { 
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__text {
+  min-inline-size: 355px;
+  min-block-size: 117px;
+  justify-self: center;
+  align-self: center;
+}
+
+.title-decor {
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: var(--font-size);
+  line-height: 23.4px;
+  color: var(--sub-text-color);
+}
+
+/* Стилизация заголовка всех секций */
+
+
+.reasons__title {
+  color: var(--accent-color);
+  font-size: var(--font-size);
+  font-family: var(--font);
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+/* Стилизация подзаголовка всех секций */
+
+.reasons__subtitle {
+  background-color: #FF0070;
+  color: var(--sub-text-color);
+  font-size: var(--font-size);
+  font-family: var(--font);
+  line-height: 23.4px;
+  font-weight: 700;
+}
+
+.reasons__subtitle-item {
+  background-color: #FF0070;
+  color: var(--sub-text-color);
+  font-size: var(--font-size);
+  font-family: var(--font);
+  line-height: 23.4px;
+  font-weight: 400;
+}
+
+/* Стилизация текста всех секций */
+
+.reasons__text {
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 23.4px;
+  font-family: var(--font);
+  color: var(--text-color);
+}
+
+/* Общая стилизация всех блоков внутри секций */
+
+.reasons__item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Стилизация секциЙ */
+
+.reasons {
+  display: grid;
+  gap: 20px;
+  margin: 0 10px 50px 10px;
+}
+
+/* Стилизация картинок */
+
+.section__image {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+.section__image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.section__image-item {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* footer */
+
+.footer {
+  block-size: 100vh;
+  min-block-size: 668px;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-title {
+  font-weight: 700;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: 83%;
+  color: var(--title-color);
 }
