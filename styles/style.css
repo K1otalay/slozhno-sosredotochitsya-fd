@@ -54,6 +54,7 @@
 /* Стили для реакции кнопки на действия с ней */
 
 .header__theme-menu-button_active {
+  pointer-events: none;
   border: 1px solid var(--button-color);
 }
 
@@ -190,6 +191,25 @@
   line-height: 23.4px;
   font-family: var(--font);
   color: var(--text-color);
+}
+
+/* стилизация ссылок */
+
+.reasons__text-link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+.reasons__text-link:hover {
+  border-bottom: 1px solid var(--text-color);
+}
+
+.reasons__text-link:focus {
+  outline: none;
+}
+
+.reasons__text-link:focus-visible {
+  border: 1px solid var(--text-color);
 }
 
 /* Общая стилизация всех блоков внутри секций */
