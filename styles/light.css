@@ -11,14 +11,11 @@
   --accent-color: #ff8dcb;
   --button-color: #353430;
   --backgroung-image: url(../images/cover-image-light.png);
+  --button-border-hover-light: #32312D66;
 }
 
 .theme-light .decorative__element {
   display: none;
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border: 1px solid rgba(50, 49, 45, 0.40);
 }
 
 @media (prefers-color-scheme: light) {

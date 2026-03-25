@@ -73,6 +73,18 @@
   outline: none;
 }
 
+/* Реакция кнопок на действие пользователи в разнах темах  */
+
+.theme-dark .header__theme-menu-button:hover {
+  border: 1px solid var(--button-color);
+  cursor: pointer;
+}
+
+.theme-light .header__theme-menu-button:hover {
+  border: 1px solid var(--button-border-hover-light);
+  cursor: pointer;;
+}
+
 /* Декоротивный элемент REC */
 
 .decorative__element {
