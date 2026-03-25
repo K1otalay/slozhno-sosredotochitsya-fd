@@ -9,7 +9,7 @@
   --text-color: #353430;
   --sub-text-color: #353430;
   --accent-color: #ff8dcb;
-  --button-color:#353430;
+  --button-color: #353430;
   --backgroung-image: url(../images/cover-image-light.png);
 }
 
@@ -27,26 +27,25 @@
     --text-color: #353430;
     --sub-text-color: #353430;
     --accent-color: #ff8dcb;
-    --button-color:#353430;
+    --button-color: #353430;
     --backgroung-image: url(../images/cover-image-light.png);
   }
+
   .decorative__element {
     display: none;
   }
-  
+
   .header__theme-menu-button:hover {
     border: 1px solid rgba(50, 49, 45, 0.40);
   }
 
   .frame::before {
-  border-top: 1px solid var(--text-color);
-  border-right: 1px solid var(--text-color);
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+  }
+
+  .frame::after {
+    border-bottom: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
+  }
 }
-
-.frame::after {
-  border-bottom: 1px solid var(--text-color);
-  border-left: 1px solid var(--text-color);
-}
-}  
-
-
