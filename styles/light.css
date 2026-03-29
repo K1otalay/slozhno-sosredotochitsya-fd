@@ -10,12 +10,19 @@
   --sub-text-color: #353430;
   --accent-color: #ff8dcb;
   --button-color: #353430;
+  --title-card: #353430;
+  --frame-color: #353430;
+  --background-color: #fff1f7;
   --backgroung-image: url(../images/cover-image-light.png);
   --button-border-hover-light: #32312D66;
 }
 
 .theme-light .decorative__element {
   display: none;
+}
+
+.footer-title {
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (prefers-color-scheme: light) {
@@ -25,6 +32,8 @@
     --sub-text-color: #353430;
     --accent-color: #ff8dcb;
     --button-color: #353430;
+    --title-card: #353430;
+    --frame-color: #353430;
     --backgroung-image: url(../images/cover-image-light.png);
   }
 
@@ -34,15 +43,5 @@
 
   .header__theme-menu-button:hover {
     border: 1px solid rgba(50, 49, 45, 0.40);
-  }
-
-  .frame::before {
-    border-top: 1px solid var(--text-color);
-    border-right: 1px solid var(--text-color);
-  }
-
-  .frame::after {
-    border-bottom: 1px solid var(--text-color);
-    border-left: 1px solid var(--text-color);
   }
 }

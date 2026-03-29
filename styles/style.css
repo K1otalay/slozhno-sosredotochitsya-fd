@@ -4,6 +4,7 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
   margin: 0 auto;
   background-image: var(--backgroung-image);
+  background-color: var(--background-color);
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -142,16 +143,16 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
+  border-top: 1px solid var(--frame-color);
+  border-right: 1px solid var(--frame-color);
 }
 
 .frame::after {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--frame-color);
+  border-left: 1px solid var(--frame-color);
 }
 
 /* Стилизация заголовка шапки */
@@ -176,13 +177,14 @@
   font-size: var(--font-size);
   line-height: 23.4px;
   color: var(--sub-text-color);
+  font-family: var(--font), monospace;
 }
 
 /* Стилизация заголовка всех секций */
 
 
 .reasons__title {
-  color: var(--accent-color);
+  color: var(--title-card);
   font-size: var(--font-size);
   font-family: var(--font), monospace;
   line-height: 23.4px;
@@ -191,21 +193,16 @@
 
 /* Стилизация подзаголовка всех секций */
 
-.reasons__subtitle {
-  background-color: #FF0070;
+/* .reasons__subtitle {
+  background-color: var(--accent-color);
   color: var(--sub-text-color);
   font-size: var(--font-size);
   font-family: var(--font), monospace;
   line-height: 23.4px;
   font-weight: 700;
-}
+} */
 
-.reasons__subtitle-item {
-  background-color: #FF0070;
-  color: var(--sub-text-color);
-  font-size: var(--font-size);
-  font-family: var(--font), monospace;
-  line-height: 23.4px;
+.reasons__subtitle {
   font-weight: 400;
 }
 
@@ -348,7 +345,11 @@
     margin: 0 20px 80px 20px;
   }
 
-  .section__question__what__reduces .reasons__title {
+  /* .section__question__what__reduces .reasons__title {
+    max-inline-size: 236px;
+  } */
+
+  .reasons__title {
     max-inline-size: 236px;
   }
 
@@ -437,6 +438,8 @@
     position: absolute;
     top: 20px;
     right: 20px;
+    /* border-top: var(--accent-color);
+    border-right: var(--accent-color); */
   }
 
   .frame::after {
@@ -508,8 +511,25 @@
 
   .section__question__tips {
     grid-template-columns: 32% 1fr;
-    grid-template-rows: 2% repeat(5, min-content);
-    margin: 0 20px 33px 20px;
+    grid-template-rows: min-content repeat(5, min-content);
+    margin: 0 20px 80px 20px;
+  }
+
+  .section__question__tips>.reasons__title {
+    grid-row: 1 / -1;
+    /* h2 растягивается на все строки */
+    grid-column: 1;
+    max-inline-size: none;
+  }
+
+  .reasons__title {
+    max-inline-size: none;
+  }
+
+  .section__question__tips>.reasons__subtitle {
+    grid-row: 1;
+    grid-column: 2;
+    align-self: start;
   }
 
   .reasons__item--columns {
