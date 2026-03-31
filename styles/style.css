@@ -64,41 +64,16 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid rgba(255, 0, 112, 0.40);
+  outline: 1px solid var(--button-hover);
 }
 
 .header__theme-menu-button:focus {
   border: none;
-  border-bottom: 1px solid rgba(255, 0, 112);
+  border-bottom: 1px solid var(--button-focus);
 }
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-}
-
-/* Реакция кнопок на действие пользователи в разнах темах  */
-
-.theme-dark .header__theme-menu-button:hover {
-  border: 1px solid var(--button-color);
-  cursor: pointer;
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border: 1px solid var(--button-border-hover-light);
-  cursor: pointer;
-  ;
-}
-
-/* Добавлены фолбеки в случае, если фоновое изображение не загрузется */
-
-.page.theme-dark {
-  background-color: #000028;
-  background-image: url("../images/cover-image-dark.png");
-}
-
-.page.theme-light {
-  background-color: #fff1f7;
-  background-image: url("../images/cover-image-light.png");
 }
 
 /* Декоротивный элемент REC */
@@ -140,7 +115,6 @@
 }
 
 .frame::before {
-  position: absolute;
   top: 10px;
   right: 10px;
   border-top: 1px solid var(--frame-color);
@@ -148,7 +122,6 @@
 }
 
 .frame::after {
-  position: absolute;
   bottom: 10px;
   left: 10px;
   border-bottom: 1px solid var(--frame-color);
@@ -316,13 +289,11 @@
   }
 
   .frame::before {
-    position: absolute;
     top: 20px;
     right: 20px;
   }
 
   .frame::after {
-    position: absolute;
     bottom: 20px;
     left: 20px;
   }

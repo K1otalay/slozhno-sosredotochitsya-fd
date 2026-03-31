@@ -14,6 +14,8 @@
   --title-card: #FF0070;
   --background-color: #000028;
   --backgroung-image: url(../images/cover-image-dark.png);
+  --button-focus: #FF0070;
+  --button-hover: #FF007066;
 }
 
 .theme-dark .decorative__element {

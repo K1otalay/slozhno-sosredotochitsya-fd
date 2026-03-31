@@ -15,6 +15,8 @@
   --background-color: #fff1f7;
   --backgroung-image: url(../images/cover-image-light.png);
   --button-border-hover-light: #32312D66;
+  --button-focus: #353430;
+  --button-hover: #32312D66;
 }
 
 .theme-light .decorative__element {
@@ -35,13 +37,13 @@
     --title-card: #353430;
     --frame-color: #353430;
     --backgroung-image: url(../images/cover-image-light.png);
+    --background-color: #fff1f7;
+    --button-hover: #32312D66;
+    --button-focus: #353430;
   }
 
   .decorative__element {
     display: none;
   }
 
-  .header__theme-menu-button:hover {
-    border: 1px solid rgba(50, 49, 45, 0.40);
-  }
 }
